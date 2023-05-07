@@ -1,0 +1,13 @@
+.overBudget {
+    background-color: red;
+    color: white;
+}
+
+.underBudget {
+    background-color: transparent;
+    color: black;
+}
+
+body {
+    margin: 0;
+}

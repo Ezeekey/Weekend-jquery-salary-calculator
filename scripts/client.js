@@ -3,7 +3,7 @@ let totalMonthlyExpenses = 0;
 
 $(function () {
     console.log('Screw all yall');
-    
+
     // Add listener for delete buttons.
     $("#tableBody").on("click", ".fire", deleteEmployee);
 
@@ -18,6 +18,7 @@ function deleteEmployee(event) {
 
     // Display monthly expenses.
     $("#totalMoneyOut").text(`$${totalMonthlyExpenses}`);
+    checkExpenses();
 
     // Delete item off list.
     $(event.target).closest("tr").remove();
@@ -25,6 +26,12 @@ function deleteEmployee(event) {
 
 
 function addEmployee() {
+    // Checking if any input was left empty.
+    if(!$("#firstNameInput").val() || !$("#lastNameInput").val() || !$("#idInput").val() || !$("#titleInput") || !$("#salaryInput").val()) {
+        alert("Please fill out all the forms you dingus!");
+        return undefined;
+    }
+
     // Add employee to table.
     $("#tableBody").append(`<tr data-monthsalary="${Math.round($("#salaryInput").val() / 12)}">
     <td>${$("#firstNameInput").val()}</td>
@@ -40,4 +47,25 @@ function addEmployee() {
 
     // Display on DOM.
     $("#totalMoneyOut").text(`$${totalMonthlyExpenses}`);
+    checkExpenses();
+
+    // Clear inputs.
+    $("#firstNameInput").val('');
+    $("#lastNameInput").val('');
+    $("#idInput").val('');
+    $("#titleInput").val('');
+    $("#salaryInput").val('');
+}
+
+
+function checkExpenses() {
+    if (totalMonthlyExpenses > 20000){
+        // Too much money being spent. Ben Franklin is mad, and the background turns red.
+        $("#totalMoneyOut").toggleClass("overBudget", true);
+        $("#totalMoneyOut").toggleClass("underBudget", false);
+    } else {
+        // Money is under budget, Ben is fine, and the background is normal.
+        $("#totalMoneyOut").toggleClass("overBudget", false);
+        $("#totalMoneyOUt").toggleClass("underBudget", true);
+    }
 }
