@@ -17,7 +17,7 @@ function deleteEmployee(event) {
     totalMonthlyExpenses -= Number($(event.target).closest("tr").data("monthsalary"));
 
     // Display monthly expenses.
-    $("#totalMoneyOut").text(`$${totalMonthlyExpenses}`);
+    $("#totalMoneyOut").text(`$${totalMonthlyExpenses.toLocaleString()}`);
     checkExpenses();
 
     // Delete item off list.
@@ -38,7 +38,7 @@ function addEmployee() {
     <td>${$("#lastNameInput").val()}</td>
     <td>${$("#idInput").val()}</td>
     <td>${$("#titleInput").val()}</td>
-    <td>$${$("#salaryInput").val()}</td>
+    <td>$${Number($("#salaryInput").val()).toLocaleString()}</td>
     <td><button class="fire">Fire</button></td>
     </tr>`);
 
@@ -46,7 +46,7 @@ function addEmployee() {
     totalMonthlyExpenses += Math.round($("#salaryInput").val() / 12);
 
     // Display on DOM.
-    $("#totalMoneyOut").text(`$${totalMonthlyExpenses}`);
+    $("#totalMoneyOut").text(`$${totalMonthlyExpenses.toLocaleString()}`);
     checkExpenses();
 
     // Clear inputs.

@@ -15,6 +15,7 @@ body {
 
 table {
     margin: 0px auto 0px;
+    width: 80%;
 
     border-spacing: 0px;
 }
@@ -25,7 +26,8 @@ th, td {
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
 
-    width: 10%;
+    width: 16.7%;
+    overflow-wrap: break-word;
 }
 
 thead {
