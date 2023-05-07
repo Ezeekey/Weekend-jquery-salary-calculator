@@ -2,7 +2,7 @@
 let totalMonthlyExpenses = 0;
 
 $(function () {
-    console.log('Screw all yall');
+    console.log('JS and JQ');
 
     // Add listener for delete buttons.
     $("#tableBody").on("click", ".fire", deleteEmployee);
