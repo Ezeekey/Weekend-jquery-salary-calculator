@@ -10,4 +10,77 @@
 
 body {
     margin: 0;
+    background-color:rgb(150, 206, 142);
+}
+
+table {
+    margin: 0px auto 0px;
+
+    border-spacing: 0px;
+}
+
+th, td {
+    border: solid darkgreen;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+
+    width: 10%;
+}
+
+thead {
+    background-color: rgb(231, 245, 232);
+}
+
+tbody {
+    background-color: rgb(205, 239, 207);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(154, 190, 151);
+}
+
+td button {
+    width: 100%;
+}
+
+#inputField {
+    margin: 0px 10% 0px;
+}
+
+input {
+    background-color: rgb(205, 239, 207);
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+h1, h2 {
+    font-family: cursive;
+    color: rgb(231, 245, 232);
+    text-shadow: 2px 2px 1px black;
+
+    margin-left: 2%;
+}
+
+button {
+    background-color: rgb(231, 245, 232);
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(116, 147, 116);
+
+    border-color: rgb(205, 239, 207);
+}
+
+#moneyCounter {
+    background-color: rgb(205, 239, 207);
+}
+
+#moneyCounter h2 {
+    color: black;
+    text-shadow: 0px 0px;
+}
+
+#ben {
+    margin: 0px 32.5% 0px;
 }

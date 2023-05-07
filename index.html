@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Super cool salary calculator</title>
+    <title>Super Cool Salary Calculator</title>
     <meta cnarset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/vendor/jquery.js"></script>
@@ -11,10 +11,10 @@
 
 <body>
     <header>
-        <h1>Salary Calculator</h1>
+        <h1>Super Cool Salary Calculator</h1>
     </header>
     <main>
-        <div>
+        <div id="inputField">
             <h2>Add employee</h2>
             <input type="text" id="firstNameInput" placeholder="First name">
             <input type="text" id="lastNameInput" placeholder="Last name">
@@ -41,9 +41,10 @@
                 </tbody>
             </table>
         </div>
-        <div>
-            <h2 id="totalOutText">Total monthly: <span id="totalMoneyOut" class="underBudget">$0</span></h2>
+        <div id="moneyCounter">
+            <h2 id="totalOutText">Total monthly expenses: <span id="totalMoneyOut" class="underBudget">$0</span></h2>
         </div>
+        <img id="ben" src="style/happyben.jpg" width="35%">
     </main>
 </body>
 

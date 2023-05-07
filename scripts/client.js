@@ -28,7 +28,7 @@ function deleteEmployee(event) {
 function addEmployee() {
     // Checking if any input was left empty.
     if(!$("#firstNameInput").val() || !$("#lastNameInput").val() || !$("#idInput").val() || !$("#titleInput") || !$("#salaryInput").val()) {
-        alert("Please fill out all the forms you dingus!");
+        alert("Please fill out all the forms properly you dingus!");
         return undefined;
     }
 
@@ -63,9 +63,13 @@ function checkExpenses() {
         // Too much money being spent. Ben Franklin is mad, and the background turns red.
         $("#totalMoneyOut").toggleClass("overBudget", true);
         $("#totalMoneyOut").toggleClass("underBudget", false);
+        // Ben is mad, and needs to show it.
+        $("#ben").attr("src", "./style/upsetben.jpg");
     } else {
         // Money is under budget, Ben is fine, and the background is normal.
         $("#totalMoneyOut").toggleClass("overBudget", false);
         $("#totalMoneyOUt").toggleClass("underBudget", true);
+        // Ben is feeling fine, and must show it.
+        $("#ben").attr("src", "./style/happyben.jpg");
     }
 }
